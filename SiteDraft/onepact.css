@@ -8336,3 +8336,13 @@
 #join4 {
   color: gray;
 }
+
+#creatorBtn {
+  letter-spacing: 2px;
+  
+}
+
+.notice {
+  line-height: 1.5 !important;
+  font-size: 85%;
+}
