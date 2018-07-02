@@ -73,23 +73,31 @@
                         <div class="form-group d-flex"> 
                             <button type="button" class="mt-2 btn btn-primary" id="chooseFiles">Choose files</button>
                             
-                            <p id="chooseSmall" class="ml-2 pt-2">Image, music, and video files are welcome.</p>
+                            <p id="chooseSmall" class="ml-2 pt-2 mb-2">Image, music, and video files are welcome.</p>
                         </div>
                         <h6>Does this product come in multiple sizes?</h6>
                         <div class="form-group d-flex">
-                            <div class="form-check pr-3">
-                                <input class="form-check-input rounded" type="radio" name="optionSizes" id="exampleNo" value="no">
-                                <label class="form-check-label pt-1" for="exampleNo">
+                           <!--  <div class="form-check pr-3">
+                                <input class="form-check-input" type="radio" name="optionSizes" id="exampleNo" value="no">
+                                <label class="contained form-check-label pt-1" for="exampleNo">
                                     No
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="optionSizes" id="exampleYes" value="yes">
-                                <label class="form-check-label pt-1" for="exampleYes">
+                                <label class="contained form-check-label pt-1" for="exampleYes">
                                      Yes
                                 </label>
                             </div>
-                        </div>
+                        -->
+                        <label class="contained">No
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="contained">Yes
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                              </label></div> 
 
                         <div class="d-flex flex-column">
                             <form class="creatorForm shortForm">
@@ -97,7 +105,7 @@
                                     <label class="sr-only" for="inlineFormInputPrice">Price</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                        <div class="input-group-text">$</div>
+                                        <div class="input-group-text"><i class="fa fa-dollar-sign" id="usd"></i></div>
                                         </div>
                                         <input type="text" class="form-control" id="inlineFormInputPrice" placeholder="Price">
                                     </div>
@@ -106,12 +114,12 @@
                                     <label class="sr-only" for="inlineFormInputStockAmount">Number in stock</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                        <div class="input-group-text">X</div>
+                                        <div class="input-group-text"><img class="xIcon" src="./images/x-icon.png"/></div>
                                         </div>
                                         <input type="text" class="form-control" id="inlineFormInputStockAmount" placeholder="Number in stock">
                                     </div>
                                 </div>
-                                <small id="exampleFormControlInput2" class=" form-text text-muted">Optional. If left blank, the stock is unlimited.</small>
+                                <small id="tagsHelp" class=" form-text">Optional. If left blank, the stock is unlimited.</small>
                               
                                 <div class ="secondHalf mt-3">
                                         <h6>Expiration Date</h6>
@@ -121,7 +129,7 @@
                                                   <div class=" w-50">
                                                    <form method="post">
                                                     <div class="form-group form-group-lg mb-1">
-                                                     <div class="input-group">
+                                                     <div class="input-group col-sm-2">
                                                       <input class="form-control" id="date" name="date" placeholder="--  / -- / --" type="text"/>
                                                       <div class="input-group-addon" id="calendarIcon">
                                                             <i class="fa fa-calendar">
@@ -147,12 +155,12 @@
                                                </div>
                                                
                                 </div>
-                                <small class=" form-text text-muted mt-0 expireNote">When does this need to be removed from the store? Leave blank if there is no expiration.</small>
+                                <small id="tagsHelp" class=" form-text text-muted mt-0 expireNote">When does this need to be removed from the store? Leave blank if there is no expiration.</small>
                                 
                                 
                                 <br>
-                                <div id="question">
-                                <p>What percentage of the profit from this product would you like to donate? <span id="smallerText">Drag the slider to the set amount.</span></p></div>
+                                <div>
+                                <p id="question">What percentage of the profit from this product would you like to donate? <span id="smallerText">Drag the slider to the set amount.</span></p></div>
                                 <div class="d-flex"></div>
                             
                                     <!-- <input type="range" min="0" max="100" value="25" id="fader" 
@@ -161,8 +169,7 @@
 
                                     <main>
                                             <form oninput="output.value = Math.round(range.valueAsNumber / 1000)">
-                                        
-                                              <div class="range">
+                                              <div class="range mb-3">
                                                 <input name="range" type="range" min="0" max="99000" value="25000">
                                                 <div class="range-output">
                                                   <output class="output" name="output" for="range" id="sliderNumber">
