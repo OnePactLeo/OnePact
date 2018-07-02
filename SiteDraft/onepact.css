@@ -8905,3 +8905,30 @@ h2 {
 .rangeslider-thumb {
   box-shadow:none !important;
 }
+
+.backButton {
+  margin-left:70px !important;
+  height: 40px;
+  border:2px solid #b2b2b2;
+  padding-right:20px;
+  color: #b2b2b2;
+  margin-top:12px;
+}
+
+.newProduct {
+  margin-left: 250px;
+  padding-right:5px;
+  padding-top:5px;
+}
+
+#caret {
+  font-size: 1px !important;
+  padding-bottom:5px;
+}
+
+.loggedIn {
+  height:50px;
+  width: 50px;
+  border-radius:100px !important;
+  margin-left: 10px;
+}
