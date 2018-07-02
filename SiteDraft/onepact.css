@@ -8298,7 +8298,7 @@
 }
 
 #partThree {
-  margin-left: -14px;
+  margin-left: -15px;
   padding-top: 10px !important;
   
   
@@ -8929,7 +8929,8 @@ h2 {
 }
 
 .backButton {
-  margin-left:90px !important;
+  margin-left:60px !important;
+  margin-right:34px;
   height: 40px;
   border:2px solid #b2b2b2;
   padding-right:20px;
@@ -8962,4 +8963,8 @@ h2 {
   padding-top: 7px;
   margin-top: -14px;
   padding-bottom: -12px !important;
+}
+
+html {
+  margin-top:-10px !important;
 }
