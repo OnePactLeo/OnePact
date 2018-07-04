@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnePact — Creator</title>
+    <link href="./onepact.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <!--[if lt IE 9]-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <!--[endif]-->
+        <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+        <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+        <!--Font Awesome (added because you use icons in your prepend/append)-->
+        <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+    </head>
+
+    <body class="body" id="conBody"> <!--Main Container-->
+        <!--Header-->
+        <div style ="" class="container-fluid sticky-top border-bottom bg-white pr-0">
+            <div class="row justify-content-center align-items-center">
+            <div class="col-sm-3 d-flex justify-content-center pt-3">
+                <a href="#"><h1 class="logo"id="partOne"><img class="logoDisk" src="./images/OnePactLogoSymbol.png"/><span class="pb-1" id=partThree>NE</span><span class="partTwo">PACT</span></h1></a>
+            </div>
+            
+            <!--Top Links-->
+            <div class="col-sm-6 d-flex justify-content-center py-2 text-dark align-items-center">
+                <a class = "text-dark px-5" href="./join1.html">Shop</a>
+                <a class = "text-dark px-5" href="./join2.html">Watch</a>
+                <a class = "text-dark px-5" href="./join3.html">Impact</a>
+            </div>
+
+            <div class="col-sm-1 d-flex justify-content-end pt-3 ml-auto">
+                <a class="text-dark" href="./join4.html"><p></p></a>
+            </div>
+
+            <div class="col-sm-1  justify-content-end">
+                    <a href ="./add-product.html"> <type="button" class="btn rounded btn-outline-primary join loggedIn"></button></a>
+            </div>
+            
+            <div class="col-sm-1 d-flex justify-content-center align-items-center align-self-end" id="cart">
+                <i class="pr-3 fas fa-shopping-cart"></i>
+            </div>
+            </div>
+        </div> <!--End Header-->
+        
+        <!--Main Container-->
+        <div class="container px-5" id="conAddProduct">
+            
+            <!-- <div class ="space2"></div> -->
+
+            <!--Welcome-->
+            <div class="row my-4 embrace">
+                    
+                <div class="col-sm-12  pl-5 text-center mt-5 m-auto d-flex">
+                        <button type="button" class=" btn btn-outline-secondary  backButton"><img style ="max-width: 18px;" id="caret" class="w-25" src="./images/left-caret.png"/> BACK</button>
+                    <h1 class ="newProduct">New Product</h1>   
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <form class="creatorForm col-sm-5">
+                        <div class="form-group">
+                            <input type="title" class="form-control" id="exampleInputTitle1" aria-describedby="titleHelp" placeholder="Product Title">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Description" maxlength="400"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="tags" class="form-control" id="exampleInputTags1" aria-describedby="tagsHelp" placeholder="Tags - separate with commas">
+                            <small id="tagsHelp" class="form-text text-muted "><h6>Colors, materials, genres, etc. Tags will help people find the item.</small>
+                        </div>
+                        
+                        <div id="dropImage" class="gray"></div>
+                        <div class="form-group d-flex"> 
+                            <button type="button" class="mt-2 btn btn-primary" id="chooseFiles">Choose files</button>
+                            
+                            <p id="chooseSmall" class="ml-2 pt-2 mb-2">Image, music, and video files are welcome.</p>
+                        </div>
+                        <h6>Does this product come in multiple sizes?</h6>
+                        <div class="form-group d-flex">
+                           <!--  <div class="form-check pr-3">
+                                <input class="form-check-input" type="radio" name="optionSizes" id="exampleNo" value="no">
+                                <label class="contained form-check-label pt-1" for="exampleNo">
+                                    No
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="optionSizes" id="exampleYes" value="yes">
+                                <label class="contained form-check-label pt-1" for="exampleYes">
+                                     Yes
+                                </label>
+                            </div>
+                        -->
+                        <label class="contained">No
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="contained">Yes
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                              </label></div> 
+
+                        <div class="d-flex flex-column">
+                            <form class="creatorForm shortForm">
+                                <div class="my-1 w-50">
+                                    <label class="sr-only" for="inlineFormInputPrice">Price</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-dollar-sign" id="usd"></i></div>
+                                        </div>
+                                        <input type="text" class="form-control" id="inlineFormInputPrice" placeholder="Price">
+                                    </div>
+                                </div>
+                                <div class="my-1 w-50">
+                                    <label class="sr-only" for="inlineFormInputStockAmount">Number in stock</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        <div class="input-group-text"><img class="xIcon" src="./images/x-icon.png"/></div>
+                                        </div>
+                                        <input type="text" class="form-control" id="inlineFormInputStockAmount" placeholder="Number in stock">
+                                    </div>
+                                </div>
+                                <small id="tagsHelp" class=" form-text">Optional. If left blank, the stock is unlimited.</small>
+                              
+                                <div class ="secondHalf mt-3">
+                                        <h6>Expiration Date</h6>
+                                        <div class="bootstrap-iso">
+                                                <div class="container-fluid">
+                                                 <div class="row">
+                                                  <div class=" w-50">
+                                                   <form method="post">
+                                                    <div class="form-group form-group-lg mb-1">
+                                                     <div class="input-group col-sm-2">
+                                                      <input class="form-control" id="date" name="date" placeholder="--  / -- / --" type="text"/>
+                                                      <div class="input-group-addon" id="calendarIcon">
+                                                            <i class="fa fa-calendar">
+                                                       </i>
+                                                       
+                                                      </div>
+                                                     </div>
+                                                    </div>
+                                                    <!-- <div class="form-group">
+                                                     <div>
+                                                      <button class="btn btn-primary btn-sm outline" name="submit" type="submit">
+                                                       Submit
+                                                      </button>
+                                                     </div>
+                                                    </div> -->
+                                                   </form>
+                                                   
+                                                 </div>
+                                                 
+                                                  </div>
+                                                
+                                                </div>
+                                               </div>
+                                               
+                                </div>
+                                <small id="tagsHelp" class=" form-text text-muted mt-0 expireNote">When does this need to be removed from the store? Leave blank if there is no expiration.</small>
+                                
+                                
+                                <br>
+                                <div>
+                                <p id="question">What percentage of the profit from this product would you like to donate? <span id="smallerText">Drag the slider to the set amount.</span></p></div>
+                                <div class="d-flex"></div>
+                            
+                                    <!-- <input type="range" min="0" max="100" value="25" id="fader" 
+                                        step="1" oninput="outputUpdate(value)">
+                                    <output for="fader" class="mt-2" id="volume">25%</output> -->
+
+                                    <main>
+                                            <form oninput="output.value = Math.round(range.valueAsNumber / 1000)">
+                                              <div class="range mb-3">
+                                                <input name="range" type="range" min="0" max="99000" value="25000">
+                                                <div class="range-output">
+                                                  <output class="output" name="output" for="range" id="sliderNumber">
+                                                    25</output><span class ="percentSymbol">%</span>
+                                                  
+                                                </div>
+                                              </div>
+                                            </form>
+                                    </main>
+                                            
+                            
+                            
+                                    <button type="submit" id="finish" class="btn btn-primary mt-5 mb-2" id="chooseFiles">FINISH</button>
+                                    <small id="tagsHelp" class="form-text text-muted m-auto">You can make changes to this product later if you need to.</small>
+                                  
+                            
+                                </div>
+                            </form>
+                        </div>
+                           
+                        
+                    </form>
+                    
+            </div>
+
+            
+            
+
+
+            
+            <!--Notice-->
+            <!-- <div class ="row my-4 mx-5">
+                <div class ="col-sm-3 text-center m-auto">
+                    <h6 id="join4" class="notice">By creating this account, you agree to the <a href="#">Terms of Use</a> 
+                        and <a href="#">Privacy Policy</a>.</h6>
+                </div>
+            </div> -->
+        </div> <!--End Main Container-->
+
+        <!--Footer-->
+        <div id="footer" class="col-sm-12 d-flex fixed-bottom justify-content-around pt-4 text-dark mt-5 pl-5 bg-light border-top ">
+            <div class="col-sm-3 ">
+                <h6 class="font-weight-bold">ONEPACT</h6>
+                <h6>Los Angeles, CA</h6>
+            </div>
+            <div class="col-sm-3 company d-flex flex-column">
+                <h6 class="font-weight-bold">COMPANY</h6>
+                <a class="text-dark" href="#">About</a>
+                <a class="text-dark" href="#">Blog</a>
+                <a class="text-dark" href="#">Careers</a>
+            </div>
+            <div class="col-sm-3 d-flex flex-column">
+                <h6 class="font-weight-bold">SUPPORT</h6>
+                <a class="text-dark" href="#">Help & FAQ</a>
+                <a class="text-dark" href="#">Contact Us</a>
+            </div>
+            <div class="col-sm-3 connect">
+                <a id="superA" href="#" class="text-dark font-weight-bold">STAY CONNECTED</a>     
+            </div>
+        </div> <!-- End Footer --> 
+
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/index.js"></script>
+        <script type="text/javascript" src="./onepact.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    </body>
+    
+</html>
+
+
